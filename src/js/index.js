@@ -1,19 +1,7 @@
-// Import React into the bundle
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "../styles/index.css";
-import SecondsCounter from "./component/secondsCounter.jsx";
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import SecondsCounter from '../js/component/secondsCounter';
 
+const root = ReactDOM.createRoot(document.getElementById('app')); 
 
-
-let segundos = 0;
-const renderCounter = () => {
-    ReactDOM.createRoot(document.getElementById('app')).render(<SecondsCounter segundos={segundos} />);
-};
-
-setInterval(() => {
-    segundos++;
-    renderCounter();
-}, 1000);
-
-renderCounter();
+root.render(<SecondsCounter />);
